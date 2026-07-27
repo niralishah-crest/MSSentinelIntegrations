@@ -661,7 +661,7 @@
         {
             "type": "Microsoft.Authorization/roleAssignments",
             "apiVersion": "2022-04-01",
-            "name": "[guid(resourceGroup().id, reference(resourceId('Microsoft.Web/sites', variables('FunctionName')), '2018-11-01', 'full').identity.principalId, variables('MonitoringMetricsPublisherRoleId'))]",
+            "name": "[guid(resourceGroup().id, variables('FunctionName'), 'MonitoringMetricsPublisher')]",
             "dependsOn": [
                 "[resourceId('Microsoft.Web/sites', variables('FunctionName'))]",
                 "[variables('webhookDcrId')]",
