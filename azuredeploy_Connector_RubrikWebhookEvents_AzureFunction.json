@@ -51,7 +51,7 @@
             "defaultValue": "Rubrik_Events_Data_CL",
             "maxLength": 52,
             "metadata": {
-                "description": "Enter the table name for types other than Anomaly, Ransomware, and Threat Hunt"
+                "description": "Enter the table name for types other than Anomaly, Ransomware, and Threat Hunt. Default is 'Rubrik_Events_Data_CL'"
             }
         },
         "ViolationTableName": {
@@ -76,28 +76,28 @@
             ],
             "defaultValue": "Info"
         },
-        "AppInsightsWorkspaceResourceID": {
-            "type": "string",
-            "metadata": {
-                "description": "Migrate Classic Application Insights to Log Analytic Workspace which is retiring by 29 Febraury 2024. Use 'Log Analytic Workspace-->Properties' blade having 'Resource ID' property value. This is a fully qualified resourceId which is in format '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}'"
-            }
-        },
         "RubrikInstanceUrl": {
             "type": "string",
             "metadata": {
-                "description": "Rubrik Security Cloud base URL, e.g. https://<account>.my.rubrik.com. Used by the Violation classification hit-count gate."
+                "description": "Rubrik Security Cloud base URL, e.g. https://[your-rubrik-instance-name]. Used by the Violation classification hit-count gate."
             }
         },
         "RubrikClientId": {
             "type": "string",
             "metadata": {
-                "description": "RSC service-account client id (client|<id>) for the classification gate."
+                "description": "RSC service-account client id for the classification gate."
             }
         },
         "RubrikClientSecret": {
             "type": "securestring",
             "metadata": {
                 "description": "RSC service-account secret for the classification gate."
+            }
+        },
+        "AppInsightsWorkspaceResourceID": {
+            "type": "string",
+            "metadata": {
+                "description": "Use 'Log Analytic Workspace-->Properties' blade having 'Resource ID' property value. This is a fully qualified resourceId which is in format '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}'"
             }
         }
     },
